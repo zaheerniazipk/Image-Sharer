@@ -42,3 +42,9 @@ Create a Page title using Title block, and content using body block
 # Adding custom context data:
 using get_context_data()    		-> views.py
 using django dynamic variables	-> home.html
+
+
+Displaying dynamic posts:
+first of all add two to three posts using admin panel
+using get_context_data() And post models			  -> views.py
+Display dynamic posts in the form of django loop  -> home.html

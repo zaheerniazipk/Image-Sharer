@@ -9,7 +9,12 @@
 
 {% block body %}
 
+<!-- display dynamic posts in the form of django loop -->
+{% for post in posts %}
 <!-- Django dynamic variable -->
-<h2>{{greeting_message}}</h2>
+<h2>{{post.text}}</h2>
+<hr>
+{% endfor %}
+
 
 {% endblock %}
