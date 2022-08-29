@@ -1,0 +1,18 @@
+Virtual Environment Created using pipenv
+-> pipenv
+-> pipenv install Django
+-> pipenv shell
+-> pip show Django
+
+Django Setup | Run Server:
+-> django-admin startproject image_sharer .
+-> python manage.py runserver
+
+
+Admin User setup and Credentials:
+-> python manage.py createsuperuser
+https://127.0.0.1:8000/admin
+username : admin
+password : 123
+email : admin@gmail.com
+
