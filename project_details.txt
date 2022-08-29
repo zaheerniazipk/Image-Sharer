@@ -23,3 +23,10 @@ goto settings and include 'feed', in the INSTALLED_APPS
 Create Django Models -> models.py and register models in admin.py and apply migrations
 -> python manage.py makemigrations
 -> python manage.py migrate
+
+
+Setting up Urls path and views
+create a file name urls.py in app called feed
+create a namespace in urls.py file
+create a classy class based view HomePageView in views.py and linked it with urls.py urls_patterns
+app urls.py file linked or include with site urls.py using namespace and app_urls
