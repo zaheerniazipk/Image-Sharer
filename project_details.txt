@@ -38,3 +38,7 @@ Create a folder named it templates nearer to manage.py and create html files in 
 Template blocks:
 Create a Page title using Title block, and content using body block
 {% block title%}Default{% endblock %}
+
+# Adding custom context data:
+using get_context_data()    		-> views.py
+using django dynamic variables	-> home.html
