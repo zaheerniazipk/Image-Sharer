@@ -30,3 +30,7 @@ create a file name urls.py in app called feed
 create a namespace in urls.py file
 create a classy class based view HomePageView in views.py and linked it with urls.py urls_patterns
 app urls.py file linked or include with site urls.py using namespace and app_urls
+
+setting up templates folder and create base template:
+Add path to TEMPLATES -> 'DIRS' in settings.py
+Create a folder named it templates nearer to manage.py and create html files in it and use it
