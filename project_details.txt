@@ -16,3 +16,10 @@ username : admin
 password : 123
 email : admin@gmail.com
 
+Make or create an app
+-> django-admin startapp feed
+goto settings and include 'feed', in the INSTALLED_APPS
+
+Create Django Models -> models.py and register models in admin.py and apply migrations
+-> python manage.py makemigrations
+-> python manage.py migrate
