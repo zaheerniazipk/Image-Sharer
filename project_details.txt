@@ -34,3 +34,7 @@ app urls.py file linked or include with site urls.py using namespace and app_url
 setting up templates folder and create base template:
 Add path to TEMPLATES -> 'DIRS' in settings.py
 Create a folder named it templates nearer to manage.py and create html files in it and use it
+
+Template blocks:
+Create a Page title using Title block, and content using body block
+{% block title%}Default{% endblock %}
