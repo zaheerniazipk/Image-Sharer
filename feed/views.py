@@ -1,4 +1,5 @@
 # from django.shortcuts import render
+from django.contrib import messages
 from django.views.generic import TemplateView, DetailView, FormView
 
 from .models import Post
@@ -28,11 +29,19 @@ class AddPostForm(FormView):
     form_class = PostForm
     success_url = '/'   # index
 
+    # To use request module in form_valid()
+    def dispatch(self, request, *args, **kwargs):
+        self.request = request
+        return super().dispatch(request, *args, **kwargs)
+
     def form_valid(self, form):
         # create a new post
         new_object = Post.objects.create(
             text=form.cleaned_data['text'],
             image=form.cleaned_data['image'],
         )
+        # Django messages framework
+        messages.add_message(self.request, messages.SUCCESS,
+                             'Your Post was Successful!')
 
         return super().form_valid(form)

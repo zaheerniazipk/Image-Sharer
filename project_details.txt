@@ -93,3 +93,8 @@ home template link with post
 17# Sorting default posts Order
 goto views.py
 use .order_by('-id') in context_data of HomePageView class
+
+18# Success Messages Framework
+rources used: https://docs.djangoproject.com/en/4.1/ref/contrib/messages/
+use django messages framework for showing success message
+Display Success Messages in the form of Session using Django messages framework in the basic template

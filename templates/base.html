@@ -12,9 +12,17 @@
 
 <body>
 
-    {% block body %}
+    <!-- Display Success Messages in the form of Session using Django messages framework -->
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+            {% endfor %}
+    </ul>
+    {% endif %}
 
-    {% endblock %}
+
+    {% block body %}{% endblock %}
 
 </body>
 
