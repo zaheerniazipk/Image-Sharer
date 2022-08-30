@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+<!-- Page Title -->
+{% block title %}Detail{% endblock %}
+
+<!-- Page body -->
+{% block body %}
+
+<!-- render data from Post model -->
+<h3>Text</h3>
+{{object.text}}
+
+<!-- Display Image -->
+<h3>Image</h3>
+<img src="{{object.image.url}}" style="width: 100%; height:auto;">
+
+{% endblock %}

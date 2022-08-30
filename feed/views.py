@@ -1,5 +1,5 @@
 # from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, DetailView
 from .models import Post
 
 
@@ -13,3 +13,9 @@ class HomePageView(TemplateView):
         # Displaying dynamic Posts
         context['posts'] = Post.objects.all()
         return context
+
+
+# Render a "detail" view of an object.
+class PostDetailView(DetailView):
+    template_name = 'detail.html'
+    model = Post

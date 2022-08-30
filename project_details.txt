@@ -68,3 +68,13 @@ Goto admin and add a new post image -> Done
 13# Adding images to templates 
 copy code Templates Usage and simple usage from https://github.com/jazzband/sorl-thumbnail and modify it accordingly -> home.html
 Now add posts from admin-panel and see the effects
+
+
+14# Adding a detail view and detail view templates
+https://ccbv.co.uk/projects/Django/4.0/django.views.generic.detail/DetailView/  use of Detail View
+create a classy class based detail view class -> views.py
+link class with the urls.py and also use post id as primary key
+create a new template called detail.html and display full image by rendering data from models
+
+check from admin panel post id and view such as
+http://127.0.0.1:8000/detail/11/
