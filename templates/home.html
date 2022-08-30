@@ -14,12 +14,16 @@
 
 <!-- display dynamic posts in the form of django loop -->
 {% for post in posts %}
-<!-- Django dynamic variable -->
-<h2>{{post.text}}</h2>
 
-{% thumbnail post.image "200x200" crop="center" as im %}
-<img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
-{% endthumbnail %}
+<!-- Make content clickable -->
+<a href="{% url 'feed:detail' post.id %}" style="display: inline-block;">
+    <!-- Django dynamic variable -->
+    <h2>{{post.text}}</h2>
+
+    {% thumbnail post.image "200x200" crop="center" as im %}
+    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+    {% endthumbnail %}
+</a>
 
 <hr>
 

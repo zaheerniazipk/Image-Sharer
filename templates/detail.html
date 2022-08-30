@@ -6,6 +6,10 @@
 <!-- Page body -->
 {% block body %}
 
+
+<!-- Template linking -->
+<a href="{% url 'feed:index' %}"> &larr; Go Back</a>
+
 <!-- render data from Post model -->
 <h3>Text</h3>
 {{object.text}}
