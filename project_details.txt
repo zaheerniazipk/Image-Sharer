@@ -88,3 +88,8 @@ create a classy class based view in views.py, linked with class PostForm of form
 update path in urls.py
 create a new_post.html template and display an upload form
 home template link with post
+
+
+17# Sorting default posts Order
+goto views.py
+use .order_by('-id') in context_data of HomePageView class
