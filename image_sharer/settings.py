@@ -54,7 +54,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'image_sharer.urls'
 
-# Template Directory
+# Add Media Directory
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+# Add Template Directory
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 TEMPLATES = [

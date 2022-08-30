@@ -59,3 +59,17 @@ Add ImageField in the models.py using sorl.thumbnail package
 other required package: Pillow
 -> pip install Pillow
 After that apply migrations and image option will be visible in admin panel
+
+
+12# Setting up Media Folder
+goto setting.py, update, make media_url and media_root of media directory and add setting in urls pattern of urls.py
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+from django.conf import settings
+from django.conf.urls.static import static
+
+under urlpatterns write the following
+if settings.DEBUG:
+	urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+Goto admin and add a new post image -> Done
