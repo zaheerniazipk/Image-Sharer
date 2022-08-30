@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+<!-- Page Title -->
+{% block title %}Add new Post{% endblock %}
+
+<!-- Page body -->
+{% block body %}
+
+<form action="" method="POST" enctype="multipart/form-data">
+    <!-- Cross-Site Request Forgery -->
+    {% csrf_token %}
+
+    <!-- render form -->
+    <!-- Display form as a paragraph -->
+    {{form.as_p}}
+
+    <!-- Form Submit -->
+    <div>
+        <button type="submit">Submit form</button>
+    </div>
+
+</form>
+
+{% endblock %}

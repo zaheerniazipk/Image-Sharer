@@ -9,7 +9,7 @@
 -> python manage.py runserver
 
 
-3# Admin User setup and Credentials:
+3# Admin User setup 
 -> python manage.py createsuperuser
 https://127.0.0.1:8000/admin
 username : admin
@@ -81,3 +81,10 @@ http://127.0.0.1:8000/detail/11/
 
 15# Linking to views from templates | Made content clickable | Templates linking
 use of {% url 'app_name:name' %}  
+
+16# Adding an Upload Form   : source: https://ccbv.co.uk/projects/Django/4.0/django.views.generic.edit/FormView/ 
+Create a forms.py file in an app and define form fields
+create a classy class based view in views.py, linked with class PostForm of forms.py and make form valid
+update path in urls.py
+create a new_post.html template and display an upload form
+home template link with post

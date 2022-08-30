@@ -12,6 +12,9 @@
 
 {% block body %}
 
+<a href="{% url 'feed:post' %}">&rarr; Add new Post</a>
+<hr>
+
 <!-- display dynamic posts in the form of django loop -->
 {% for post in posts %}
 
