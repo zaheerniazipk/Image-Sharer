@@ -1,50 +1,61 @@
-Virtual Environment Created using pipenv
+1# Virtual Environment Created using pipenv
 -> pipenv
 -> pipenv install Django
 -> pipenv shell
 -> pip show Django
 
-Django Setup | Run Server:
+2# Django Setup | Run Server:
 -> django-admin startproject image_sharer .
 -> python manage.py runserver
 
 
-Admin User setup and Credentials:
+3# Admin User setup and Credentials:
 -> python manage.py createsuperuser
 https://127.0.0.1:8000/admin
 username : admin
 password : 123
 email : admin@gmail.com
 
-Make or create an app
+4# Make or create an app
 -> django-admin startapp feed
 goto settings and include 'feed', in the INSTALLED_APPS
 
-Create Django Models -> models.py and register models in admin.py and apply migrations
+5# Create Django Models -> models.py and register models in admin.py and apply migrations
 -> python manage.py makemigrations
 -> python manage.py migrate
 
 
-Setting up Urls path and views
+6# Setting up Urls path and views
 create a file name urls.py in app called feed
 create a namespace in urls.py file
 create a classy class based view HomePageView in views.py and linked it with urls.py urls_patterns
 app urls.py file linked or include with site urls.py using namespace and app_urls
 
-setting up templates folder and create base template:
+7# setting up templates folder and create base template:
 Add path to TEMPLATES -> 'DIRS' in settings.py
 Create a folder named it templates nearer to manage.py and create html files in it and use it
 
-Template blocks:
+8# Template blocks:
 Create a Page title using Title block, and content using body block
 {% block title%}Default{% endblock %}
 
-# Adding custom context data:
+9# Adding custom context data:
 using get_context_data()    		-> views.py
 using django dynamic variables	-> home.html
 
 
-Displaying dynamic posts:
+10# Displaying dynamic posts:
 first of all add two to three posts using admin panel
 using get_context_data() And post models			  -> views.py
 Display dynamic posts in the form of django loop  -> home.html
+
+
+11# Adding Images to Model:
+install django packages sorl-thumbnail for display image in the form of thumbnail in the virtual environment
+-> pip install sorl-thumbnail				# docs -> https://github.com/jazzband/sorl-thumbnail
+Then register 'sorl.thumbnail', in the 'INSTALLED_APPS' section of your project's settings.
+'sorl.thumbnail',
+Add ImageField in the models.py using sorl.thumbnail package
+other required package: Pillow
+-> pip install Pillow
+After that apply migrations and image option will be visible in admin panel
