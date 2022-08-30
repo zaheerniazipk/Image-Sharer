@@ -112,6 +112,7 @@ beautify upload form page -> new_post.html
 Beautify Success Message box using background and colors
 what if tere is not post link to new post-> home.html
 
-all Done!!
-
 Create a requirements.txt file which contains all packages named that are used in the project
+
+
+all Done!!
