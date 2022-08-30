@@ -98,3 +98,16 @@ use .order_by('-id') in context_data of HomePageView class
 rources used: https://docs.djangoproject.com/en/4.1/ref/contrib/messages/
 use django messages framework for showing success message
 Display Success Messages in the form of Session using Django messages framework in the basic template
+
+
+19# Add Bootstrap to Django
+link bootstrap cdn -> base.html
+Adding Navbar -> base.html
+remove extra template linkings | clean code  -> home.html, detail.html
+Make post content in a center using container -> base.html
+use of include in the templates -> navbar.html
+use of cards for posts and make them in a gird of 3 columns   -> home.html
+make full image responsive -> detail.html
+beautify upload form page -> new_post.html
+Beautify Success Message box using background and colors
+what if tere is not post link to new post-> home.html

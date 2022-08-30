@@ -6,17 +6,18 @@
 <!-- Page body -->
 {% block body %}
 
-<form action="" method="POST" enctype="multipart/form-data">
+<form action="" method="POST" enctype="multipart/form-data" class="col-sm-4 offset-4 py-5 my-5">
     <!-- Cross-Site Request Forgery -->
     {% csrf_token %}
 
+    <h2>Upload an image!</h2>
     <!-- render form -->
     <!-- Display form as a paragraph -->
     {{form.as_p}}
 
     <!-- Form Submit -->
     <div>
-        <button type="submit">Submit form</button>
+        <button type="submit" class="btn btn-lg btn-success">Submit form</button>
     </div>
 
 </form>

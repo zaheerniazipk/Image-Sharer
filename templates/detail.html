@@ -7,15 +7,13 @@
 {% block body %}
 
 
-<!-- Template linking -->
-<a href="{% url 'feed:index' %}"> &larr; Go Back</a>
-
-<!-- render data from Post model -->
-<h3>Text</h3>
-{{object.text}}
-
-<!-- Display Image -->
-<h3>Image</h3>
-<img src="{{object.image.url}}" style="width: 100%; height:auto;">
+<div class="row">
+    <div class="col-sm-10 offset-sm-1 py-5">
+        <!-- render data from Post model -->
+        {{object.text}}
+        <!-- Display Image -->
+        <img src="{{object.image.url}}" class="img-fluid rounded">
+    </div>
+</div>
 
 {% endblock %}
