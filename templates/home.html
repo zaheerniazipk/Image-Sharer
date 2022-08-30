@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 
+{% load thumbnail %}
+
+
 
 <!-- Page Title-->
 {% block title %}Home{%endblock %}
@@ -13,7 +16,13 @@
 {% for post in posts %}
 <!-- Django dynamic variable -->
 <h2>{{post.text}}</h2>
+
+{% thumbnail post.image "200x200" crop="center" as im %}
+<img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+{% endthumbnail %}
+
 <hr>
+
 {% endfor %}
 
 
